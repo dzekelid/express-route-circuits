@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Azure Virtual Network
-x-complete: 1
+x-complete: 0
 info:
-  title: NetworkManagementClient
-  description: the-microsoft-azure-network-management-api-provides-a-restful-set-of-web-services-that-interact-with-microsoft-azure-networks-service-to-manage-your-network-resources--the-api-has-entities-that-capture-the-relationship-between-an-end-user-and-the-microsoft-azure-networks-service-
+  title: Azure Virtual Network API Express Route Circuits Get Stats
+  description: Gets all the stats from an express route circuit in a resource group.
   version: 1.0.0
 host: management.azure.com
 basePath: /
@@ -180,57 +181,17 @@ paths:
           description: OK
       tags:
       - Express Route Circuits
-  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits/{circuitName}/peerings/{peeringName}/stats
-  : get:
-      summary: Express Route Circuits Get Peering Stats
-      description: Gets all stats from an express route circuit in a resource group.
-      operationId: ExpressRouteCircuits_GetPeeringStats
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkexpressroutecircuitscircuitnamepeeringspeeringnamestats-get
-      parameters:
-      - in: path
-        name: circuitName
-        description: The name of the express route circuit
-      - in: query
-        name: No Name
-      - in: path
-        name: peeringName
-        description: The name of the peering
-      - in: path
-        name: resourceGroupName
-        description: The name of the resource group
-      responses:
-        200:
-          description: OK
-      tags:
-      - Express Route Circuits
-  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCircuits:
-    get:
-      summary: Express Route Circuits List
-      description: Gets all the express route circuits in a resource group.
-      operationId: ExpressRouteCircuits_List
-      x-api-path-slug: subscriptionssubscriptionidresourcegroupsresourcegroupnameprovidersmicrosoft-networkexpressroutecircuits-get
-      parameters:
-      - in: query
-        name: No Name
-      - in: path
-        name: resourceGroupName
-        description: The name of the resource group
-      responses:
-        200:
-          description: OK
-      tags:
-      - Express Route Circuits
-  /subscriptions/{subscriptionId}/providers/Microsoft.Network/expressRouteCircuits:
-    get:
-      summary: Express Route Circuits List All
-      description: Gets all the express route circuits in a subscription.
-      operationId: ExpressRouteCircuits_ListAll
-      x-api-path-slug: subscriptionssubscriptionidprovidersmicrosoft-networkexpressroutecircuits-get
-      parameters:
-      - in: query
-        name: No Name
-      responses:
-        200:
-          description: OK
-      tags:
-      - Express Route Circuits
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
